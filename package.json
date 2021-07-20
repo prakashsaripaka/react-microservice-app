@@ -1,5 +1,5 @@
 {
-  "name": "react-microservice-app",
+  "name": "ads-react-microservice-app",
   "version": "1.2.16",
   "description": "A base app to load all the react microservices",
   "main": "lib/index.js",
@@ -11,23 +11,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nagendertank/react-microservice-app.git"
+    "url": "git+https://github.com/prakashsaripaka/react-microservice-app.git"
   },
   "keywords": [
     "react",
     "webpack"
   ],
-  "author": "Nagendra Tank",
+  "author": "Prakash Saripaka",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nagendertank/react-microservice-app.git/issues"
+    "url": "https://github.com/prakashsaripaka/react-microservice-app.git"
   },
-  "homepage": "https://github.com/nagendertank/react-microservice-app.git#readme",
+  "homepage": "https://github.com/prakashsaripaka/react-microservice-app.git#readme",
   "devDependencies": {
     "axios": "^0.18.0",
     "axios-mock-adapter": "^1.15.0",
     "babel-cli": "^6.18.0",
     "babel-core": "^6.18.2",
+    "babel-eslint": "^10.1.0",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-env": "^1.7.0",
@@ -40,14 +41,31 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.3.4",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.1.1",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "eslint-plugin-import": "^2.23.3",
+    "eslint-plugin-jest": "^24.1.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^4.6.0",
+    "eslint-webpack-plugin": "^2.5.4",
     "jest": "^22.4.3",
     "jsdom": "^11.11.0",
+    "local-package-publisher": "^1.0.4",
     "path-to-regexp": "^2.2.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-test-renderer": "^16.9.0"
   },
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.19",
+    "path": "^0.12.7"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
   }
 }

@@ -1,0 +1,40 @@
+{
+    "specData": {
+      "cdn": "<cdn url for payment-service resources>",
+      "specs": [
+            {
+                "service_name": "payment-service",
+                "spec": {
+                    "isCanaryApp": false,
+                    "isMultiCanaryFlag": true,
+                    "name": "payment-service",
+                    "version": "v1",
+                    "servers": [{
+                        "url": "<server url>",
+                        "description": "local"
+                    }],
+                    "resources": [{
+                        "type": "javascript",
+                        "fileName": "payment-service-bundle",
+                        "extension": "js"
+                    },
+                    {
+                        "type": "css",
+                        "fileName": "payment-service-bundle",
+                        "extension": "css"
+                    }],
+                    "navigation": [{
+                    "menuName": "<base app menu name>"
+                    }],
+                    "offering": "payment",
+                    "library": "payment-module",
+                    "sharedRoutes": [
+                    ],
+                    "containerName": "payments/v1",
+                    "canaryFlag": "none"
+                },
+                "type": "UI"
+            }
+        ]
+    }
+}
