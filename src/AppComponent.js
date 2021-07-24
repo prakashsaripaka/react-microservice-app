@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import pathToRegexp from 'path-to-regexp';
-import _ from 'lodash';
 import LoadBundle from './LoadBundlesUtils';
 import * as internalCache from './internalCache';
 import { axiosInstance } from './axiosInstance';
 
-const APP_MODE = window.location.hostname === 'localhost' ? 'dev' : 'prod';
+const APP_MODE = (process.env && process.env.NODE_ENV && process.env.NODE_ENV === 'production') ? 'prod' : 'dev';
 export default class AppComponent extends Component {
   constructor(props) {
     super(props);
@@ -89,7 +88,7 @@ export default class AppComponent extends Component {
     const { customAxiosInstance } = this.props;
     const api = customAxiosInstance || axiosInstance;
     if (internalCache.appSpecs
-      && (internalCache.appSpecs.length > 0 || !_.isUndefined(internalCache.appSpecs.specs))) {
+      && (internalCache.appSpecs.length > 0 || internalCache.appSpecs.specs)) {
       callback(internalCache.appSpecs);
     } else {
       api.get(`${props.apiGwUrl}/apigw/v1/register/UI`).then((res) => {
