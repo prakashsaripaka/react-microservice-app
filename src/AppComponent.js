@@ -4,7 +4,7 @@ import LoadBundle from './LoadBundlesUtils';
 import * as internalCache from './internalCache';
 import { axiosInstance } from './axiosInstance';
 
-const APP_MODE = (process.env && process.env.NODE_ENV && process.env.NODE_ENV === 'production') ? 'prod' : 'dev';
+const APP_MODE = (typeof process !== 'undefined' && process.env && process.env.NODE_ENV && process.env.NODE_ENV === 'production') ? 'prod' : 'dev';
 export default class AppComponent extends Component {
   constructor(props) {
     super(props);
