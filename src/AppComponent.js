@@ -4,7 +4,6 @@ import LoadBundle from './LoadBundlesUtils';
 import * as internalCache from './internalCache';
 import { axiosInstance } from './axiosInstance';
 
-const APP_MODE = (typeof process !== 'undefined' && process.env && process.env.NODE_ENV && process.env.NODE_ENV === 'production') ? 'prod' : 'dev';
 export default class AppComponent extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +23,7 @@ export default class AppComponent extends Component {
     this.getSpecs = this.getSpecs.bind(this);
     this.loadRoute = this.loadRoute.bind(this);
     this.currentBundle = 0;
+    this.app_mode = (process.env.NODE_ENV === 'production') ? 'prod' : 'dev';
     this.specData = (window.uiLocalSpecs) ? window.uiLocalSpecs.specData : {};
   }
 
@@ -95,7 +95,7 @@ export default class AppComponent extends Component {
         internalCache.appSpecs = res.data;
         callback(res.data);
       }, () => {
-        if (APP_MODE === 'prod') {
+        if (this.app_mode === 'prod') {
           self.setState({
             loading: false,
             errorComponent: <div>Unable to load component</div>,
