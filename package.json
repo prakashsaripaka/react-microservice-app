@@ -1,6 +1,6 @@
 {
-  "name": "ads-react-microservice",
-  "version": "1.2.19",
+  "name": "react-microservice",
+  "version": "1.1.1",
   "description": "A base app to load all the react microservices",
   "main": "lib/index.js",
   "scripts": {

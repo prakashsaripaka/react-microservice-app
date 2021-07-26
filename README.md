@@ -1,14 +1,14 @@
-# react-microservice-app
+# react-microservice
 
 ## Installation
 ```
-$ npm install react-microservice-app --save-dev 
+$ npm install react-microservice --save-dev 
 ```
 
 ## Usage
 Load microservice via route
 ```jsx
-import {AppComponent} from 'react-microservice-app'
+import {AppComponent} from 'react-microservice'
 
 <Route exact path={"/abc/**"}
     component={(props) => <AppComponent menuName="abc" overrideComponent={LoadMenuTabs} routeUrl="/abc" apiGwUrl={'http://layout_server'} {...props}/>}  fallbackComponent={optionalFallbackComponent}/>
