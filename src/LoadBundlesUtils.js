@@ -51,7 +51,7 @@ function loadCSS(cssElement, appDetail, apiGWURl, token, callback) {
     cssElem.href = `${apiGWURl}/${appDetail.name}/${appDetail.version}/${cssElement.fileName}.css`;
   }
 
-  if (token) {
+  if (token && token.indexOf('undefined') === -1) {
     cssElem.href += token;
   }
 
